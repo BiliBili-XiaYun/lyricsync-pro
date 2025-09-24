@@ -20,7 +20,7 @@
 - 设置：应用字体、编辑器字体、界面缩放（100/125/150）
 - 快照：保存即生成快照；“文件 → 从快照恢复…” 可预览并恢复/覆盖
 
-> 注：接口可能变更，如下载失败可切换镜像/源或扩展至其他平台 API。
+> 注：接口可能变更，如下载失败请提交issue或者你有能力可以自己尝试修改程序
 
 ## 安装与运行
 
@@ -33,37 +33,22 @@ python .\main.py
 
 ## 快照与设置
 
-- 快照目录：`snapshots/`（不会纳入版本控制）
-- 设置项（通过 QSettings 持久化）：界面缩放、应用字体、编辑器字体、空白符显示、上次文件夹与文件
+- 快照目录：`./snapshots/`
+- 设置项：界面缩放、应用字体、编辑器字体、空白符显示、上次文件夹与文件
 
 ## 本地打包
 
-- 一键打包（推荐，onefile 模式）：
-
+- 一键打包：
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\build_onefile.ps1
 ```
 
-- 或者使用基础命令（非 onefile 示例）：
+- 或者使用基础命令：
 
 ```powershell
 pip install pyinstaller
 pyinstaller --noconfirm --windowed --name LyricSyncPro main.py
 ```
-
-## GitHub Actions 自动发布
-
-仓库已配置工作流：当推送 tag（如 `v0.1.0`）时，会自动在 Windows 上用 PyInstaller 构建并上传 Release 资产。
-
-1. 推送代码到 GitHub。
-2. 创建标签并推送：
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-完成后可在 Releases 页面下载 `LyricSyncPro-windows.zip`。
 
 ## 版权与许可
 
