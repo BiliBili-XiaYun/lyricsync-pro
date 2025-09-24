@@ -20,8 +20,7 @@
 - 设置：应用字体、编辑器字体、界面缩放（100/125/150）
 - 快照：保存即生成快照；“文件 → 从快照恢复…” 可预览并恢复/覆盖
 
-> 注：接口可能变更，如下载失败请提交issue或者你有能力可以自己尝试修改程序
-
+> 注：接口可能变更，如下载失败请提交 issue；或如有能力可自行修改程序。
 ## 安装与运行
 
 ```powershell
@@ -38,18 +37,23 @@ python .\main.py
 
 ## 本地打包
 
-- 一键打包：
+- 一键打包（推荐，onefile 模式）：
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\build_onefile.ps1
 ```
 
-- 或者使用基础命令：
-
+- 或者使用基础命令（非 onefile 示例）：
 ```powershell
 pip install pyinstaller
 pyinstaller --noconfirm --windowed --name LyricSyncPro main.py
 ```
 
+## 自动发布（区分 autobuild 与手动上传）
+
+- 当你推送以 `v*` 开头的标签时（例如 `v0.1.2`），工作流会自动构建并在 Release 页面创建名为：
+  - `LyricSyncPro-windows-${tag}-autobuild.zip`
+  - Release 标题会带有 `[autobuild]` 标记，说明中包含工作流与提交信息。
+- 若你手动上传资产，建议不要包含 `-autobuild` 后缀，即可与自动构建内容区分开。
 ## 版权与许可
 
 本项目采用 MIT 许可证，见 `LICENSE`。
