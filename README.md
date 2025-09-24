@@ -4,7 +4,7 @@
 
 歌词下载与编辑工具（PySide6）
 
-[![Build and Release](https://github.com/yourname/lyricsync-pro/actions/workflows/release.yml/badge.svg)](../../actions)
+[![Build and Release](https://github.com/BiliBili-XiaYun/lyricsync-pro/actions/workflows/release.yml/badge.svg)](https://github.com/BiliBili-XiaYun/lyricsync-pro/actions)
 
 </div>
 
@@ -36,7 +36,15 @@ python .\main.py
 - 快照目录：`snapshots/`（不会纳入版本控制）
 - 设置项（通过 QSettings 持久化）：界面缩放、应用字体、编辑器字体、空白符显示、上次文件夹与文件
 
-## 打包
+## 本地打包
+
+- 一键打包（推荐，onefile 模式）：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\build_onefile.ps1
+```
+
+- 或者使用基础命令（非 onefile 示例）：
 
 ```powershell
 pip install pyinstaller
