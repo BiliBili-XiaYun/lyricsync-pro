@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+.env
+
+# Packaging
+build/
+dist/
+*.spec
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# App data
+snapshots/*.json
