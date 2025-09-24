@@ -48,12 +48,12 @@ pip install pyinstaller
 pyinstaller --noconfirm --windowed --name LyricSyncPro main.py
 ```
 
-## 自动发布（区分 autobuild 与手动上传）
+## 自动发布
 
-- 当你推送以 `v*` 开头的标签时（例如 `v0.1.2`），工作流会自动构建并在 Release 页面创建名为：
+- 工作流会自动构建并在 Release 页面创建名为：
   - `LyricSyncPro-windows-${tag}-autobuild.zip`
-  - Release 标题会带有 `[autobuild]` 标记，说明中包含工作流与提交信息。
-- 若你手动上传资产，建议不要包含 `-autobuild` 后缀，即可与自动构建内容区分开。
+  - 带有autobuild标记的文件为工作流自动打包，如果打包的文件无法使用请及时反馈。
+
 ## 版权与许可
 
 本项目采用 MIT 许可证，见 `LICENSE`。
